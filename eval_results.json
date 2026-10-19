@@ -1,0 +1,215 @@
+[
+ {
+  "run": "run1_initial",
+  "note": "first run on held-out split, pipeline as committed in bc81db7 (+ thread cap, resumable runner)",
+  "utc": "2026-10-18T23:51:40+00:00",
+  "thresholds": {
+   "tol": 0.05,
+   "A_row_agreement_min": 0.6,
+   "B_large_corruption_recall_min": 0.9
+  },
+  "seed": 20261019,
+  "figures_total": 146,
+  "figures_supported": 86,
+  "coverage_figures": 0.589041095890411,
+  "unsupported_reasons": {
+   "no calibratable tick row (need >=3 consistent numeric ticks)": 33,
+   "fewer than 2 printed 'est [lo, hi]' rows": 27
+  },
+  "rows_supported": 960,
+  "rows_agree": 514,
+  "A_row_agreement": 0.5354166666666667,
+  "A_figure_macro_mean": 0.5667084244407126,
+  "flagged_row_reasons": {
+   "mismatch:lo+hi": 57,
+   "mismatch:est": 38,
+   "mismatch:est+lo+hi": 134,
+   "mismatch:lo": 41,
+   "mismatch:hi": 66,
+   "mismatch:est+lo": 39,
+   "mismatch:est+hi": 26,
+   "no-marker": 12,
+   "no-whisker": 27,
+   "empty-band": 6
+  },
+  "B_large_corruption_recall": 0.9964980544747082,
+  "B_by_type": {
+   "decimal_slip": {
+    "n": 514,
+    "flagged": 514,
+    "recall": 1.0
+   },
+   "est_plus10": {
+    "n": 514,
+    "flagged": 511,
+    "recall": 0.9941634241245136
+   },
+   "est_minus10": {
+    "n": 514,
+    "flagged": 514,
+    "recall": 1.0
+   },
+   "hi_plus25": {
+    "n": 514,
+    "flagged": 514,
+    "recall": 1.0
+   },
+   "swap_bounds": {
+    "n": 514,
+    "flagged": 508,
+    "recall": 0.9883268482490273
+   },
+   "digit_transpose": {
+    "n": 514,
+    "flagged": 508,
+    "recall": 0.9883268482490273
+   }
+  },
+  "clean_row_flag_rate": 0.46458333333333335,
+  "precision_at_10pct_corruption_prevalence": 0.19245781061392422,
+  "pass_A": false,
+  "pass_B": true
+ },
+ {
+  "run": "run2_per_panel_axes",
+  "note": "fix attempt 1: one axis per tick row, rows assigned to nearest axis below (multi-panel figures)",
+  "utc": "2026-10-18T23:55:40+00:00",
+  "thresholds": {
+   "tol": 0.05,
+   "A_row_agreement_min": 0.6,
+   "B_large_corruption_recall_min": 0.9
+  },
+  "seed": 20261019,
+  "figures_total": 146,
+  "figures_supported": 90,
+  "coverage_figures": 0.6164383561643836,
+  "unsupported_reasons": {
+   "no calibratable tick row (need >=3 consistent numeric ticks)": 29,
+   "fewer than 2 printed 'est [lo, hi]' rows": 27
+  },
+  "rows_supported": 1044,
+  "rows_agree": 595,
+  "A_row_agreement": 0.5699233716475096,
+  "A_figure_macro_mean": 0.5817758205077607,
+  "flagged_row_reasons": {
+   "mismatch:lo+hi": 57,
+   "mismatch:est": 39,
+   "mismatch:est+lo+hi": 129,
+   "mismatch:lo": 44,
+   "mismatch:hi": 77,
+   "mismatch:est+lo": 29,
+   "mismatch:est+hi": 17,
+   "no-whisker": 40,
+   "no-marker": 11,
+   "empty-band": 6
+  },
+  "B_large_corruption_recall": 0.9969747899159664,
+  "B_by_type": {
+   "decimal_slip": {
+    "n": 595,
+    "flagged": 595,
+    "recall": 1.0
+   },
+   "est_plus10": {
+    "n": 595,
+    "flagged": 592,
+    "recall": 0.9949579831932773
+   },
+   "est_minus10": {
+    "n": 595,
+    "flagged": 595,
+    "recall": 1.0
+   },
+   "hi_plus25": {
+    "n": 595,
+    "flagged": 595,
+    "recall": 1.0
+   },
+   "swap_bounds": {
+    "n": 595,
+    "flagged": 589,
+    "recall": 0.9899159663865547
+   },
+   "digit_transpose": {
+    "n": 595,
+    "flagged": 590,
+    "recall": 0.9915966386554622
+   }
+  },
+  "clean_row_flag_rate": 0.4300766283524904,
+  "precision_at_10pct_corruption_prevalence": 0.2048158415935889,
+  "pass_A": false,
+  "pass_B": true
+ },
+ {
+  "run": "run3_vertical_line_reject",
+  "note": "fix attempt 2: reject thin band-spanning vertical components (null line) as marker candidates",
+  "utc": "2026-10-18T23:56:44+00:00",
+  "thresholds": {
+   "tol": 0.05,
+   "A_row_agreement_min": 0.6,
+   "B_large_corruption_recall_min": 0.9
+  },
+  "seed": 20261019,
+  "figures_total": 146,
+  "figures_supported": 90,
+  "coverage_figures": 0.6164383561643836,
+  "unsupported_reasons": {
+   "no calibratable tick row (need >=3 consistent numeric ticks)": 29,
+   "fewer than 2 printed 'est [lo, hi]' rows": 27
+  },
+  "rows_supported": 1044,
+  "rows_agree": 600,
+  "A_row_agreement": 0.5747126436781609,
+  "A_figure_macro_mean": 0.5846997971159478,
+  "flagged_row_reasons": {
+   "mismatch:lo+hi": 57,
+   "mismatch:est": 34,
+   "mismatch:est+lo+hi": 127,
+   "mismatch:lo": 44,
+   "mismatch:hi": 77,
+   "mismatch:est+lo": 29,
+   "mismatch:est+hi": 17,
+   "no-whisker": 40,
+   "no-marker": 13,
+   "empty-band": 6
+  },
+  "B_large_corruption_recall": 0.997,
+  "B_by_type": {
+   "decimal_slip": {
+    "n": 600,
+    "flagged": 600,
+    "recall": 1.0
+   },
+   "est_plus10": {
+    "n": 600,
+    "flagged": 597,
+    "recall": 0.995
+   },
+   "est_minus10": {
+    "n": 600,
+    "flagged": 600,
+    "recall": 1.0
+   },
+   "hi_plus25": {
+    "n": 600,
+    "flagged": 600,
+    "recall": 1.0
+   },
+   "swap_bounds": {
+    "n": 600,
+    "flagged": 594,
+    "recall": 0.99
+   },
+   "digit_transpose": {
+    "n": 600,
+    "flagged": 595,
+    "recall": 0.9916666666666667
+   }
+  },
+  "clean_row_flag_rate": 0.4252873563218391,
+  "precision_at_10pct_corruption_prevalence": 0.20664984669044334,
+  "pass_A": false,
+  "pass_B": true
+ }
+]

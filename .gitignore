@@ -1,0 +1,7 @@
+data/corpus/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+data/ocr_cache/
+godmode-trash/
